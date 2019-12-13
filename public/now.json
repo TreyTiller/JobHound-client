@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "alias": "trey-tiller-job-hound",
+    "name": "job-hound",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/.*", "dest": "/index.html" }
+    ]
+  }
