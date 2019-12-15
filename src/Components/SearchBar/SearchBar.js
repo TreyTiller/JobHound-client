@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchBar.css";
+import { Link } from 'react-router-dom'
 
 // This component will render a search bar that filters the current list by the user input
 
@@ -9,12 +10,12 @@ import "./SearchBar.css";
 class SearchBar extends React.Component {
   render() {
     return (
-      <div>
-        <form>
-          <input type="text" placeholder="search by company name" />
-          <button type="submit">Search</button>
+      <div className="top-nav">
+        <Link to="/login"><button className="button">Logout</button></Link>
+        <form className="search-input">
+          <input type="text" placeholder="Search" className="search"/>
         </form>
-        <button>Add Tracker</button>
+        <Link to="/new-tracker"><button className="button">Add Tracker</button></Link>
       </div>
     );
   }

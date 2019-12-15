@@ -1,5 +1,47 @@
 .sidebar {
-    max-width: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    height: 100%;
+  height: 100%;
+  width: 200px; 
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #2b2e4a; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
 }
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.filter {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.filter:hover{
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+hr {
+    width: 80%;
+    border: .5px solid rgba(119, 119, 119, 0.425);
+}
+
+  

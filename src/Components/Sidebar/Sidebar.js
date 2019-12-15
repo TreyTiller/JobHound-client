@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../../../src/Job Hound Logo 100px.png";
-import { slide as Menu } from 'react-burger-menu';
 import "./Sidebar.css";
 
 // This component will render the list of stages to filter the job listings by, and a logo. This will be continuous
@@ -17,31 +16,23 @@ import "./Sidebar.css";
 class Sidebar extends React.Component {
   render() {
     return (
-      <Menu>
-      <a className="menu-item" href="/">
-        Home
-      </a>
-
-      <a className="menu-item" href="/laravel">
-        Laravel
-      </a>
-
-      <a className="menu-item" href="/angular">
-        Angular
-      </a>
-
-      <a className="menu-item" href="/react">
-        React
-      </a>
-
-      <a className="menu-item" href="/vue">
-        Vue
-      </a>
-
-      <a className="menu-item" href="/node">
-        Node
-      </a>
-    </Menu>
+      <div className="sidebar">
+      <div className="logo">
+        <img src={Logo} alt="job hound logo"></img>
+      </div>
+      <div className="filters">
+      <hr></hr>
+      <button className="filter">All</button>
+      <hr></hr>
+      <button className="filter">Leads</button>
+      <hr></hr>
+      <button className="filter">Applied</button>
+      <hr></hr>
+      <button className="filter">Interviewed</button>
+      <hr></hr>
+      <button className="filter">Archive</button>
+      </div>
+      </div>
     );
   }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import "./JobList.css";
+import Trash from "../../../src/icons8-delete-bin-50.png";
+import { Link } from "react-router-dom";
 
 // This will render a set of filterable cards that are used to navigate to a specific job tracker
 
@@ -36,29 +38,61 @@ class JobList extends React.Component {
           jobTitle: "Title",
           company: "Company Name",
           location: "Atlanta"
+        },
+        {
+          jobTitle: "Title",
+          company: "Company Name",
+          location: "Atlanta"
+        },
+        {
+          jobTitle: "Title",
+          company: "Company Name",
+          location: "Atlanta"
+        },
+        {
+          jobTitle: "Title",
+          company: "Company Name",
+          location: "Atlanta"
+        },
+        {
+          jobTitle: "Title",
+          company: "Company Name",
+          location: "Atlanta"
+        },
+        {
+          jobTitle: "Title",
+          company: "Company Name",
+          location: "Atlanta"
         }
       ]
     };
   }
   render() {
     return (
-      <div>
+      <Link className="whole-list">
         {this.state.listData.map(card => (
-          <div className="card">
-            <h3>{card.jobTitle}</h3>
-            <div className="meta">
-              <div>
-                <p>{card.company}</p>
+          <Link className="listing">
+            <Link to="/tracker">
+              <div className="card">
+                <h3>{card.jobTitle}</h3>
+                <div className="meta">
+                  <div>
+                    <p>{card.company}</p>
+                  </div>
+                  <div>
+                    <p>{card.location}</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p>{card.location}</p>
-              </div>
+            </Link>
+            <div className="delete-button">
+              <button className="delete">
+                <img src={Trash} alt="delete button" className="trash"></img>
+              </button>
             </div>
-            <button>Delete</button>
-          </div>
-          
+          </Link>
         ))}
-      </div>
+      </Link>
     );
   }
 }

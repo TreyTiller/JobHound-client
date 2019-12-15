@@ -11,18 +11,17 @@ import './App.css'
 function App() {
   return (
     <div>
-      <h1>Im creating the sidebar</h1>
+    <BrowserRouter>
+      <main className="App">
+        <Route exact path="/" component={Tutorial} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Registration} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/new-tracker" component={TrackerForm} />
+        <Route path="/tracker" component={Tracker} />
+      </main>
+    </BrowserRouter>
     </div>
-    // <BrowserRouter>
-    //   <main className="App">
-    //     <Route exact path="/" component={Tutorial} />
-    //     <Route path="/login" component={Login} />
-    //     <Route path="/register" component={Registration} />
-    //     <Route path="/dashboard" component={Dashboard} />
-    //     <Route path="/new-tracker" component={TrackerForm} />
-    //     <Route path="/tracker" component={Tracker} />
-    //   </main>
-    // </BrowserRouter>
   );
 }
 
