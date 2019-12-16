@@ -1,5 +1,6 @@
 import React from "react";
 import "./Tracker.css";
+import {Link} from 'react-router-dom';
 
 
 class Tracker extends React.Component {
@@ -51,7 +52,8 @@ class Tracker extends React.Component {
           aliquip ex ea commodo consequat.
         </p>
 
-        <button>Delete Tracker</button>
+        <Link to="/dashboard"><button>Back</button></Link>
+        <Link to="/dashboard"><button>Delete Tracker</button></Link>
       </div>
     );
   }

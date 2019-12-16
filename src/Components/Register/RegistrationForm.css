@@ -1,0 +1,14 @@
+.logo-header{
+    display: flex;
+    justify-content: center;
+}
+
+.registration-form {
+    margin: auto;
+    width: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
