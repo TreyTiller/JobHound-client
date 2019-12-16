@@ -16,6 +16,11 @@
     margin-bottom: 30px;
 }
 
+.dash-logo {
+    width: 150px;
+    height: auto;
+}
+
 .filter {
     background-color: transparent;
     border: none;
