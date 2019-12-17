@@ -7,6 +7,7 @@ import Tracker from "./Components/Tracker/Tracker";
 import Tutorial from "./Components/Tutorial/Tutorial";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import './App.css'
+import RegistrationPage from "./Routes/RegistrationPage/RegistrationPage";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <main className="App">
         <Route exact path="/" component={Tutorial} />
         <Route path="/login" component={Login} />
-        <Route path="/register" component={Registration} />
+        <Route path="/register" component={RegistrationPage} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/new-tracker" component={TrackerForm} />
         <Route path="/tracker" component={Tracker} />

@@ -1,0 +1,59 @@
+
+.Hyph {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.Input,
+.Textarea {
+  border: .5px solid rgba(225, 225, 225, 0.336);
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: left;
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.Input::placeholder,
+.Textarea::placeholder {
+  color: rgba(204, 204, 204, 0.534);
+}
+
+.Textarea {
+  resize: vertical;
+}
+
+.Button {
+  border: .5px solid rgba(225, 225, 225, 0.336);
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100px;
+  transition-duration: 0.4s;
+}
+
+.Button:hover {
+  background-color: rgba(212, 118, 111, 0.726);
+  cursor: pointer;
+}
+
+.Required {
+  color: #CA1551;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.Section {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.Section--list {
+  margin-left: 10px;
+  margin-right: 10px;
+}
