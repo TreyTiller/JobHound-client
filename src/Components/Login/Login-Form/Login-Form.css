@@ -1,0 +1,50 @@
+.login_label {
+    display: none;
+}
+
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+    border: .5px solid rgba(225, 225, 225, 0.336);
+    border-radius: 8px;
+    background-color: #282828;
+}
+
+.user_name {
+    margin:auto;
+}
+
+.password {
+    margin: auto;
+}
+
+input {
+    border: .5px solid rgba(225, 225, 225, 0.336);
+    height: 20px;
+    margin: 10px;
+    width: 100px;
+    background-color: #171717;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    margin: auto;
+}
+
+.red {
+    text-align: center;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+

@@ -1,7 +1,7 @@
 import React from "react";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import TrackerForm from "./Components/TrackerForm/TrackerForm";
-import Login from "./Components/Login/LoginForm";
+import LoginPage from './Routes/LoginPage/LoginPage';
 import Registration from "./Components/Register/RegistrationForm";
 import Tracker from "./Components/Tracker/Tracker";
 import Tutorial from "./Components/Tutorial/Tutorial";
@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <main className="App">
         <Route exact path="/" component={Tutorial} />
-        <Route path="/login" component={Login} />
+        <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegistrationPage} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/new-tracker" component={TrackerForm} />
