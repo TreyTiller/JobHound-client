@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../../src/Job Hound Logo-white-280.png";
+import Logo from "../../../src/Images/Job Hound Logo-white-280.png";
 import "./Sidebar.css";
 
 // This component will render the list of stages to filter the job listings by, and a logo. This will be continuous

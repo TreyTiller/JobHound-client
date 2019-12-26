@@ -1,7 +1,7 @@
 import React from "react";
 import "./TrackerForm.css";
 import { Link } from "react-router-dom";
-import Logo from "../../../src/Job Hound Logo 100px.png";
+import Logo from "../../../src/Images/Job Hound Logo 100px.png";
 
 // This component will render out a form that will collect all user data in its state and POST that information
 // to the database

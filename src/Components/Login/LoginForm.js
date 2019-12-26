@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../../src/Job Hound Logo 100px.png";
+import Logo from "../../../src/Images/Job Hound Logo 100px.png";
 import "./LoginForm.css";
 import {Link} from 'react-router-dom';
 

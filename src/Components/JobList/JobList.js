@@ -1,6 +1,6 @@
 import React from "react";
 import "./JobList.css";
-import Trash from "../../../src/icons8-delete-bin-50.png";
+import Trash from "../../../src/Images/icons8-delete-bin-50.png";
 import { Link } from "react-router-dom";
 
 // This will render a set of filterable cards that are used to navigate to a specific job tracker
