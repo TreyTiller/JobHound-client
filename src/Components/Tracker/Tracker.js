@@ -1,29 +1,56 @@
 import React from "react";
 import "./Tracker.css";
 import {Link} from 'react-router-dom';
+import config from '../../config';
+import TokenService from '../../services/token-service';
+
 
 
 class Tracker extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        listing: {}
+    }
+}
+
+
+componentDidMount() {
+  const id = this.props.match.params.listing_id
+  fetch(`${config.API_ENDPOINT}/api/listings/${id}`, {
+      headers: {
+          Authorization: `Bearer ${TokenService.getAuthToken()}`
+      }
+  })
+      .then(res => res.json())
+      .then(listing => {
+          this.setState({
+              listing: listing
+          })
+      })
+}
+
+
   render() {
     return (
       <div>
-        <h2>Job title</h2>
+        <h2>{this.state.listing.title}</h2>
         <div class="meta">
-          <h3>Company Name</h3>
-          <h3>Date Applied</h3>
+          <h3>{this.state.listing.company_name}</h3>
+          <h3>{this.state.listing.date_applied}</h3>
         </div>
 
         <section class="contact">
           <div>
-            <p>Source Found</p>
-            <p>Location</p>
-            <p>Hiring Manager/ Contact</p>
+            <p>{this.state.listing.source}</p>
+            <p>{this.state.listing.location}</p>
+            <p>{this.state.listing.contact}</p>
           </div>
 
           <div>
-            <p>Interview Date</p>
-            <p>Phone</p>
-            <p>Email</p>
+            <p>{this.state.listing.date_interviewed}</p>
+            <p>{this.state.listing.phone}</p>
+            <p>{this.state.listing.email}</p>
           </div>
         </section>
 
@@ -36,26 +63,28 @@ class Tracker extends React.Component {
 
         <h4>Next steps/ Notes</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        {this.state.listing.notes}
         </p>
 
         <hr></hr>
 
         <h4>Job Details/ Listing</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        {this.state.listing.listing}
         </p>
 
         <Link to="/dashboard"><button>Back</button></Link>
         <Link to="/dashboard"><button>Delete Tracker</button></Link>
       </div>
     );
+  }
+}
+
+Tracker.defaultProps = {
+  match: {
+      params: {
+          
+      }
   }
 }
 
