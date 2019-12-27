@@ -14,6 +14,24 @@ class Tracker extends React.Component {
     }
 }
 
+deleteListingRequest = listing_id => {
+  const id = this.props.match.params.listing_id
+  fetch(`${config.API_ENDPOINT}/api/listings/${id}`, {
+      method: "DELETE",
+      headers: {
+          Authorization: `Bearer ${TokenService.getAuthToken()}`
+      }
+  })
+      .then(res => {
+          if (!res.ok) {
+              return res.json().then(error => {
+                  throw error;
+              });
+          }
+          return alert('This brew guide has been deleted');
+      })
+};
+
 
 componentDidMount() {
   const id = this.props.match.params.listing_id
@@ -35,12 +53,12 @@ componentDidMount() {
     return (
       <div>
         <h2>{this.state.listing.title}</h2>
-        <div class="meta">
+        <div className="meta">
           <h3>{this.state.listing.company_name}</h3>
           <h3>{this.state.listing.date_applied}</h3>
         </div>
 
-        <section class="contact">
+        <section className="contact">
           <div>
             <p>{this.state.listing.source}</p>
             <p>{this.state.listing.location}</p>
@@ -54,7 +72,7 @@ componentDidMount() {
           </div>
         </section>
 
-        <div class="stages">
+        <div className="stages">
           <button>Lead</button>
           <button>Applied</button>
           <button>Interviewed</button>
@@ -74,7 +92,7 @@ componentDidMount() {
         </p>
 
         <Link to="/dashboard"><button>Back</button></Link>
-        <Link to="/dashboard"><button>Delete Tracker</button></Link>
+        <Link to="/dashboard"><button onClick={this.deleteListingRequest}>Delete Tracker</button></Link>
       </div>
     );
   }
