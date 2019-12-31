@@ -13,8 +13,8 @@ class SearchBar extends React.Component {
     return (
       <div className="top-nav">
         <Link to="/login"><button className="button">Logout</button></Link>
-        <form className="search-input">
-          <input type="text" placeholder="Search" className="search" />
+        <form className="search-input" onSubmit={this.props.submitSearch}>
+          <input type="text" placeholder="Search" className="search" onChange = {evt => this.props.handleInputChange(evt)}/>
         </form>
         <Link to="/new-tracker"><button className="button">Add Tracker</button></Link>
       </div>
