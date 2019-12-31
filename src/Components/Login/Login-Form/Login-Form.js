@@ -46,11 +46,11 @@ export default class LoginForm extends Component {
     this.setState({ error: null });
     const { user_name, password } = ev.target;
 
-     AuthApiService.postLogin({
+    AuthApiService.postLogin({
       user_name: user_name.value,
       password: password.value
     })
-    
+
       .then(res => {
         user_name.value = "";
         password.value = "";
@@ -82,7 +82,9 @@ export default class LoginForm extends Component {
     // }
     return (
       <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
-        <div role="alert">{this.state.error && <p className="red">{this.state.error}</p>}</div>
+        <div role="alert">
+          {this.state.error && <p className="red">{this.state.error}</p>}
+        </div>
         <div className="user_name">
           <label htmlFor="LoginForm__user_name" className="login_label">
             User name

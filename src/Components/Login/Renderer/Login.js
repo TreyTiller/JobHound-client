@@ -1,6 +1,5 @@
-import React from 'react';
-import LoginForm from '../Login-Form/Login-Form';
-
+import React from "react";
+import LoginForm from "../Login-Form/Login-Form";
 
 function Login() {
   return (

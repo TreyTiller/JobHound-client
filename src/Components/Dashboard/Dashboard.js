@@ -47,18 +47,24 @@ class Dashboard extends React.Component {
     const listData = this.state.listData.filter(item => {
       if (this.state.section !== "All" && item.stage !== this.state.section) {
         return false;
-      } else if(item.stage == this.state.section) {
+      } else if (item.stage === this.state.section) {
         return true;
-      } else if(this.state.search !== ""){
-        return item.title.toLowerCase().indexOf(this.state.search.toLowerCase()) > -1;
+      } else if (this.state.search !== "") {
+        return (
+          item.title.toLowerCase().indexOf(this.state.search.toLowerCase()) > -1
+        );
       } else {
-        return this.state.listData
+        return this.state.listData;
       }
     });
     return (
       <div>
         <div className="main">
-          <SearchBar className="search" handleInputChange={this.handleInputChange} submitSearch={this.submitSearch} />
+          <SearchBar
+            className="search"
+            handleInputChange={this.handleInputChange}
+            submitSearch={this.submitSearch}
+          />
           <JobList listData={listData} />
         </div>
         <div className="sidebar">

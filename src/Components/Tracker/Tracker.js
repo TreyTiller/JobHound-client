@@ -1,53 +1,48 @@
 import React from "react";
 import "./Tracker.css";
-import {Link} from 'react-router-dom';
-import config from '../../config';
-import TokenService from '../../services/token-service';
-
-
+import { Link } from "react-router-dom";
+import config from "../../config";
+import TokenService from "../../services/token-service";
 
 class Tracker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        listing: {}
-    }
-}
+      listing: {}
+    };
+  }
 
-deleteListingRequest = listing_id => {
-  const id = this.props.match.params.listing_id
-  fetch(`${config.API_ENDPOINT}/api/listings/${id}`, {
+  deleteListingRequest = listing_id => {
+    const id = this.props.match.params.listing_id;
+    fetch(`${config.API_ENDPOINT}/api/listings/${id}`, {
       method: "DELETE",
       headers: {
-          Authorization: `Bearer ${TokenService.getAuthToken()}`
+        Authorization: `Bearer ${TokenService.getAuthToken()}`
       }
-  })
-      .then(res => {
-          if (!res.ok) {
-              return res.json().then(error => {
-                  throw error;
-              });
-          }
-          return alert('This brew guide has been deleted');
-      })
-};
+    }).then(res => {
+      if (!res.ok) {
+        return res.json().then(error => {
+          throw error;
+        });
+      }
+      return alert("This brew guide has been deleted");
+    });
+  };
 
-
-componentDidMount() {
-  const id = this.props.match.params.listing_id
-  fetch(`${config.API_ENDPOINT}/api/listings/${id}`, {
+  componentDidMount() {
+    const id = this.props.match.params.listing_id;
+    fetch(`${config.API_ENDPOINT}/api/listings/${id}`, {
       headers: {
-          Authorization: `Bearer ${TokenService.getAuthToken()}`
+        Authorization: `Bearer ${TokenService.getAuthToken()}`
       }
-  })
+    })
       .then(res => res.json())
       .then(listing => {
-          this.setState({
-              listing: listing
-          })
-      })
-}
-
+        this.setState({
+          listing: listing
+        });
+      });
+  }
 
   render() {
     return (
@@ -80,20 +75,22 @@ componentDidMount() {
         </div>
 
         <h4>Next steps/ Notes</h4>
-        <p>
-        {this.state.listing.notes}
-        </p>
+        <p>{this.state.listing.notes}</p>
 
         <hr></hr>
 
         <h4>Job Details/ Listing</h4>
-        <p>
-        {this.state.listing.listing}
-        </p>
+        <p>{this.state.listing.listing}</p>
 
-        <Link to="/dashboard"><button>Back</button></Link>
-        <Link to="/update/:listing_id"><button>Edit</button></Link>
-        <Link to="/dashboard"><button onClick={this.deleteListingRequest}>Delete Tracker</button></Link>
+        <Link to="/dashboard">
+          <button>Back</button>
+        </Link>
+        <Link to="/update/:listing_id">
+          <button>Edit</button>
+        </Link>
+        <Link to="/dashboard">
+          <button onClick={this.deleteListingRequest}>Delete Tracker</button>
+        </Link>
       </div>
     );
   }
@@ -101,10 +98,8 @@ componentDidMount() {
 
 Tracker.defaultProps = {
   match: {
-      params: {
-          
-      }
+    params: {}
   }
-}
+};
 
 export default Tracker;
