@@ -22,14 +22,6 @@ class Dashboard extends React.Component {
     });
   };
 
-  submitSearch = e => {
-    e.preventDefault();
-    let search = "this is working suprisingly"
-    // this.state.listData.filter(item => {
-
-    // })
-  }
-
   componentDidMount() {
     fetch(`${config.API_ENDPOINT}/api/listings`, {
       headers: {
@@ -52,12 +44,15 @@ class Dashboard extends React.Component {
   };
 
   render() {
-
     const listData = this.state.listData.filter(item => {
       if (this.state.section !== "All" && item.stage !== this.state.section) {
         return false;
-      } else {
+      } else if(item.stage == this.state.section) {
         return true;
+      } else if(this.state.search !== ""){
+        return item.title.toLowerCase().indexOf(this.state.search.toLowerCase()) > -1;
+      } else {
+        return this.state.listData
       }
     });
     return (
