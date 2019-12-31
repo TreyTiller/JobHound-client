@@ -2,7 +2,6 @@ import React from "react";
 import "./RegistrationForm.css";
 import { Button, Input, Required } from '../Utils/Utils';
 import AuthApiService from '../../services/auth-api-service';
-import Logo from "../../../src/Images/Job Hound Logo 100px.png";
 import { Link } from "react-router-dom";
 
 class Registration extends React.Component {

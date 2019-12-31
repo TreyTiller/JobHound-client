@@ -14,6 +14,9 @@ import "./Sidebar.css";
 // select(*).from('job-listings').where('stage') = ('Lead')
 
 class Sidebar extends React.Component {
+
+
+
   render() {
     return (
       <div className="sidebar">
@@ -22,15 +25,15 @@ class Sidebar extends React.Component {
       </div>
       <div className="filters">
       <hr></hr>
-      <button className="filter">All</button>
+      <button className="filter" onClick = {e => this.props.setSection("All")}>All</button>
       <hr></hr>
-      <button className="filter">Leads</button>
+      <button className="filter" onClick = {e => this.props.setSection("Lead")}>Leads</button>
       <hr></hr>
-      <button className="filter">Applied</button>
+      <button className="filter" onClick = {e => this.props.setSection("Applied")}>Applied</button>
       <hr></hr>
-      <button className="filter">Interviewed</button>
+      <button className="filter" onClick = {e => this.props.setSection("Interviewed")}>Interviewed</button>
       <hr></hr>
-      <button className="filter">Archive</button>
+      <button className="filter" onClick = {e => this.props.setSection("Archived")}>Archive</button>
       </div>
       </div>
     );

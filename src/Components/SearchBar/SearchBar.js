@@ -8,12 +8,13 @@ import { Link } from 'react-router-dom'
 // company
 
 class SearchBar extends React.Component {
+
   render() {
     return (
       <div className="top-nav">
         <Link to="/login"><button className="button">Logout</button></Link>
         <form className="search-input">
-          <input type="text" placeholder="Search" className="search"/>
+          <input type="text" placeholder="Search" className="search" />
         </form>
         <Link to="/new-tracker"><button className="button">Add Tracker</button></Link>
       </div>

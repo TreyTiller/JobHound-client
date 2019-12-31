@@ -43,7 +43,7 @@ export default class LoginForm extends Component {
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault();
-    this.setState({ error: null, loading: true });
+    this.setState({ error: null });
     const { user_name, password } = ev.target;
 
      AuthApiService.postLogin({
@@ -59,7 +59,7 @@ export default class LoginForm extends Component {
         this.props.onLoginSuccess();
       })
       .catch(res => {
-        this.setState({ error: res.error, loading: false, done: false });
+        this.setState({ error: res.error });
       });
   };
   render() {

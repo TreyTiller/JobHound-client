@@ -12,30 +12,30 @@ import config from '../../config';
 // the most important data. We create a endpoint param based on job_id
 
 class JobList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        "listData": []
-    }
-}
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//         "listData": []
+//     }
+// }
 
-componentDidMount() {
-  fetch(`${config.API_ENDPOINT}/api/listings`, {
-      headers: {
-          authorization: `Bearer ${TokenService.getAuthToken()}`
-      }
-  })
-      .then(res => res.json())
-      .then(listings => {
-          this.setState({
-              listData: listings
-          })
-      })
-}
+// componentDidMount() {
+//   fetch(`${config.API_ENDPOINT}/api/listings`, {
+//       headers: {
+//           authorization: `Bearer ${TokenService.getAuthToken()}`
+//       }
+//   })
+//       .then(res => res.json())
+//       .then(listings => {
+//           this.setState({
+//               listData: listings
+//           })
+//       })
+// }
   render() {
     return (
       <Link className="whole-list">
-        {this.state.listData.map(card => (
+        {this.props.listData.map(card => (
           <Link className="listing">
             <Link to={'/tracker/' + card.id} style={{ textDecoration: 'none' }}>
               <div className="card">

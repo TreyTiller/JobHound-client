@@ -7,6 +7,7 @@ import Tutorial from "./Components/Tutorial/Tutorial";
 import { BrowserRouter, Route } from "react-router-dom";
 import './App.css'
 import RegistrationPage from "./Routes/RegistrationPage/RegistrationPage";
+import UpdateTracker from "./Components/Tracker/UpdateTracker";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/new-tracker" component={TrackerForm} />
         <Route path="/tracker/:listing_id" component={Tracker} />
+        <Route path="/update/:listing_id" component={UpdateTracker} />
       </main>
     </BrowserRouter>
     </div>
