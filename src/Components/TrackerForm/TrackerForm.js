@@ -60,15 +60,32 @@ class TrackerForm extends React.Component {
         source: this.state.source,
         listing: this.state.listing
       };
+
       let listing = {};
-      fetch(`${config.API_ENDPOINT}/api/listings`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${TokenService.getAuthToken()}`
-        },
-        body: JSON.stringify(data)
-      })
+      let apiRequest;
+      if (this.state.id) {
+        apiRequest = fetch(
+          `${config.API_ENDPOINT}/api/listings/${this.state.id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              authorization: `Bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify(data)
+          }
+        );
+      } else {
+        apiRequest = fetch(`${config.API_ENDPOINT}/api/listings`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${TokenService.getAuthToken()}`
+          },
+          body: JSON.stringify(data)
+        });
+      }
+      apiRequest
         .then(res => res.json())
         .catch(error => console.error("Error:", error))
         .then(response => {
@@ -79,6 +96,21 @@ class TrackerForm extends React.Component {
         });
     }
   };
+
+  componentDidMount() {
+    const id = this.props.match.params.listing_id;
+    fetch(`${config.API_ENDPOINT}/api/listings/${id}`, {
+      headers: {
+        Authorization: `Bearer ${TokenService.getAuthToken()}`
+      }
+    })
+      .then(res => res.json())
+      .then(listing => {
+        this.setState({
+          ...listing
+        });
+      });
+  }
 
   render() {
     const {

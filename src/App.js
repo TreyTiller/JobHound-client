@@ -19,6 +19,7 @@ function App() {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/new-tracker" component={TrackerForm} />
           <Route path="/tracker/:listing_id" component={Tracker} />
+          <Route path="/update/:listing_id" component={TrackerForm} />
         </main>
       </BrowserRouter>
     </div>

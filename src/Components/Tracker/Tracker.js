@@ -85,7 +85,7 @@ class Tracker extends React.Component {
         <Link to="/dashboard">
           <button>Back</button>
         </Link>
-        <Link to="/update/:listing_id">
+        <Link to={"/update/" + this.state.listing.id}>
           <button>Edit</button>
         </Link>
         <Link to="/dashboard">
