@@ -9,7 +9,12 @@ class Registration extends React.Component {
     onRegistrationSuccess: () => {}
   };
 
-  state = { error: null };
+  constructor(props){
+    super(props);
+    this.state = {
+      error: null
+    }
+  }
 
   handleSubmit = ev => {
     ev.preventDefault();
