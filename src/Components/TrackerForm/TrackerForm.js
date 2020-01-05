@@ -3,6 +3,7 @@ import "./TrackerForm.css";
 import Logo from "../../../src/Images/Job Hound Logo 100px.png";
 import TokenService from "../../services/token-service";
 import config from "../../config";
+import {Link} from 'react-router-dom';
 
 class TrackerForm extends React.Component {
   constructor() {
@@ -221,6 +222,7 @@ class TrackerForm extends React.Component {
               placeholder="Notes"
             />
           </div>
+          <Link to="/dashboard"><button>Back</button></Link>
           <button type="submit">Start Tracking</button>
         </form>
       </div>

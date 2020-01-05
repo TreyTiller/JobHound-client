@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: "http://localhost:8000",
-  TOKEN_KEY: "JobHound"
+  API_ENDPOINT: "https://jobhound-api.herokuapp.com",
+  TOKEN_KEY: "jobhound-client-auth-token"
 };
