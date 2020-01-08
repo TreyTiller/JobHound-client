@@ -8,9 +8,6 @@
     justify-content: center;
     width: 300px;
     margin: auto;
-    border: .5px solid rgba(225, 225, 225, 0.336);
-    border-radius: 8px;
-    background-color: #282828;
 }
 
 .user_name {
