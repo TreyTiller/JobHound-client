@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Section } from "../../Components/Utils/Utils";
 import RegistrationForm from "../../Components/Register/RegistrationForm";
+import Logo from "../../../src/Images/Job Hound Logo 260px.png";
 
 export default class RegistrationPage extends Component {
   static defaultProps = {
@@ -17,7 +18,10 @@ export default class RegistrationPage extends Component {
   render() {
     return (
       <Section className="RegistrationPage">
-        <h2>Register</h2>
+        <div className="logo-header">
+          <img src={Logo} alt="job hound logo" className="login-logo" />
+        </div>
+        <h2>Create an account to get started!</h2>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />

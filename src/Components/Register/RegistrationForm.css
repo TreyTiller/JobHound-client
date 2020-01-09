@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-.registration-form {
+/* .registration-form {
     margin: auto;
     width: 300px;
     border: 1px solid black;
@@ -11,4 +11,234 @@
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-}
+} */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* basic stylings ------------------------------------------ */
+  body {
+    background: url(https://scotch.io/wp-content/uploads/2014/07/61.jpg);
+  }
+  .container {
+    font-family: 'Roboto';
+    width: 600px;
+    margin: 30px auto 0;
+    display: block;
+    background: #fff;
+    padding: 10px 50px 50px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2b2e4a;
+  }
+  h2 small {
+    font-weight: normal;
+    color: #888;
+    display: block;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer a {
+    color: #53b2c8;
+  }
+  
+  .login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+  }
+  
+  .buttons-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .buttons-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  /* form starting stylings ------------------------------- */
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+  }
+  input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
+  }
+  input:focus {
+    outline: none;
+  }
+  
+  /* LABEL ======================================= */
+  label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -webkit-transition: 0.5s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label,
+  input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #373b66;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar {
+    position: relative;
+    display: block;
+    width: 300px;
+  }
+  .bar:before,
+  .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #373b66;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  .bar:before {
+    left: 50%;
+  }
+  .bar:after {
+    right: 50%;
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before,
+  input:focus ~ .bar:after {
+    width: 50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.2s ease;
+    -moz-animation: inputHighlighter 0.2s ease;
+    animation: inputHighlighter 0.2s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  /* @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  } */
+  
+
+  .but-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 600px;
+  }
+  
+  .button {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #bfc0c0;
+    margin: 20px 20px 20px 20px;
+    color: #bfc0c0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    border: 2px solid #373b66;
+    transition: all 0.3s ease-Out;
+  }
+  
+  .butt {
+    color: #bfc0c0;
+    height: 40px;
+    width: 150px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .butt:hover {
+    color: #373b66;
+    transition: all 0.3s ease-Out;
+  }
+  
+  #button-4 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  #button-4 button {
+    position: relative;
+    transition: all 0.45s ease-Out;
+  }
+  
+  #underline {
+    width: 100%;
+    height: 2.5px;
+    margin-top: 15px;
+    align-self: flex-end;
+    left: -200px;
+    background: #373b66; /*Change this to the color of the sidebar*/
+    position: absolute;
+    transition: all 0.3s ease-Out;
+    bottom: 0;
+  }
+  
+  #button-4:hover #underline {
+    left: 0;
+  }
+  

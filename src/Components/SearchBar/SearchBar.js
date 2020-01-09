@@ -11,8 +11,8 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="top-nav">
-        <Link to="/login">
-          <button className="button">Logout</button>
+        <Link to="/login" className="link">
+          <button className="button nav">Logout</button>
         </Link>
         <form className="search-input" onSubmit={this.props.submitSearch}>
           <input
@@ -22,8 +22,8 @@ class SearchBar extends React.Component {
             onChange={evt => this.props.handleInputChange(evt)}
           />
         </form>
-        <Link to="/new-tracker">
-          <button className="button">Add Tracker</button>
+        <Link to="/new-tracker" className="link">
+          <button className="button nav">Add Tracker</button>
         </Link>
       </div>
     );

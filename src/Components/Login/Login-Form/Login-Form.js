@@ -81,44 +81,86 @@ export default class LoginForm extends Component {
     //   );
     // }
     return (
-      <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
-        <div role="alert">
-          {this.state.error && <p className="red">{this.state.error}</p>}
-        </div>
-        <div className="user_name">
-          <label htmlFor="LoginForm__user_name" className="login_label">
-            User name
-          </label>
-          <Input
-            required
-            name="user_name"
-            id="LoginForm__user_name"
-            placeholder="User Name"
-          ></Input>
-        </div>
-        <div className="password">
-          <label htmlFor="LoginForm__password" className="login_label">
-            Password
-          </label>
-          <Input
-            required
-            name="password"
-            type="password"
-            id="LoginForm__password"
-            placeholder="Password"
-          ></Input>
-        </div>
-        <div className="buttons">
-          <Button type="submit">Login</Button>
+      // <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
+      //   <div role="alert">
+      //     {this.state.error && <p className="red">{this.state.error}</p>}
+      //   </div>
+      //   <div className="user_name">
+      //     <label htmlFor="LoginForm__user_name" className="login_label">
+      //       User name
+      //     </label>
+      //     <Input
+      //       required
+      //       name="user_name"
+      //       id="LoginForm__user_name"
+      //       placeholder="User Name"
+      //     ></Input>
+      //   </div>
+      //   <div className="password">
+      //     <label htmlFor="LoginForm__password" className="login_label">
+      //       Password
+      //     </label>
+      //     <Input
+      //       required
+      //       name="password"
+      //       type="password"
+      //       id="LoginForm__password"
+      //       placeholder="Password"
+      //     ></Input>
+      //   </div>
+      //   <div className="buttons">
+      //     <Button type="submit">Login</Button>
 
-          <Link to="/register">
-            <Button>Register</Button>
-          </Link>
-          <Link to="/">
-            <Button>Tutorial</Button>
-          </Link>
+      //     <Link to="/register">
+      //       <Button>Register</Button>
+      //     </Link>
+      //     <Link to="/">
+      //       <Button>Tutorial</Button>
+      //     </Link>
+      //   </div>
+      // </form>
+      <div className="container">
+        <form className="login_form" onSubmit={this.handleSubmitJwtAuth}>
+          <div role="alert">
+            {this.state.error && <p className="red">{this.state.error}</p>}
+          </div>
+          <div className="group">
+            <input type="text" name="user_name" id="LoginForm__user_name" required />
+            <span className="highlight" />
+            <span className="bar" />
+            <label>Username</label>
+          </div>
+
+          <div className="group">
+            <input type="password" name="password" id="LoginForm__password" required />
+            <span className="highlight" />
+            <span className="bar" />
+            <label>Password</label>
+          </div>
+        <div className="but-container">
+        <div className="buttons">
+          <div className="button" id="button-4">
+            <div id="underline" />
+            <Link to="/register">
+              <button className="butt">Register</button>
+            </Link>
+          </div>
+
+          <div className="button" id="button-4">
+            <div id="underline" />
+            <Link to="/">
+              <button className="butt">Tutorial</button>
+            </Link>
+          </div>
+
+          <div className="button" id="button-4">
+            <div id="underline" />
+            <button type="submit" className="butt">Login</button>
+          </div>
         </div>
-      </form>
+        </div>
+        </form>
+      </div>
     );
   }
 }
