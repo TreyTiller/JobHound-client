@@ -50,11 +50,6 @@ class JobList extends React.Component {
                 </div>
               </div>
             </Link>
-            <div className="delete-button">
-              <button className="delete">
-                <img src={Trash} alt="delete button" className="trash"></img>
-              </button>
-            </div>
           </Link>
         ))}
       </Link>

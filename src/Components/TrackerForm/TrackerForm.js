@@ -3,7 +3,7 @@ import "./TrackerForm.css";
 import Logo from "../../../src/Images/Job Hound Logo 100px.png";
 import TokenService from "../../services/token-service";
 import config from "../../config";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class TrackerForm extends React.Component {
   constructor() {
@@ -133,7 +133,7 @@ class TrackerForm extends React.Component {
         <div className="logo-header">
           <img src={Logo} alt="job hound logo" />
         </div>
-        <form onSubmit={this.handleSubmit} className="tracker-form">
+        <div onSubmit={this.handleSubmit} className="tracker-form">
           <div>
             <input
               required
@@ -222,9 +222,24 @@ class TrackerForm extends React.Component {
               placeholder="Notes"
             />
           </div>
-          <Link to="/dashboard"><button>Back</button></Link>
-          <button type="submit">Start Tracking</button>
-        </form>
+
+          <div className="but-container">
+            <div className="button" id="button-4">
+              <div id="underline" />
+              <Link to="/dashboard">
+                <button className="butt">Back</button>
+              </Link>
+            </div>
+            <div className="button" id="button-4">
+              <div id="underline" />
+              <Link to="/">
+                <button className="butt" type="submit">
+                  Start Tracking
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

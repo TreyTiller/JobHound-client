@@ -8,6 +8,7 @@
   background-color: #2b2e4a; 
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
+  box-shadow: 0 3px 8px #373b666b;
 }
 
 .logo{
