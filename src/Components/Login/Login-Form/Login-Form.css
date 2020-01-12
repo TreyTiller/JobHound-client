@@ -228,6 +228,7 @@ input {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    transition: 0.3s ease all;
   }
   
   .button:hover {
@@ -244,6 +245,7 @@ input {
     background: transparent;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
   
   .butt:hover {

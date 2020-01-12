@@ -1,9 +1,21 @@
 .card {
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #9fa0a0;
     border-radius: 5px;
     width: 200px;
+    min-height: 180px;
     text-align: center;
     margin-bottom: 10px;
+    color: rgba(15, 15, 15, 0.897);
+    padding: 12px;
+    transition: 0.4s ease all;
+}
+
+.card:hover {
+    box-shadow: 0 6px 8px #373b66b4;
+	transition: 0.4s ease all;
 }
 
 .listing{
@@ -11,6 +23,7 @@
     flex-direction: column;
     margin: 20px;
     justify-content: center;
+    text-decoration: none;
 }
 
 .whole-list {
@@ -19,6 +32,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 50px;
+    text-decoration: none;
 }
 
 .delete{
@@ -37,5 +51,24 @@
     justify-content: center;
 }
 
+.line {
+    border: 0.5px solid #bfc0c0;
+}
 
+.company {
+    margin-bottom: 5px;
+}
+
+.info-c {
+    font-size: 14px;
+}
+
+.info-l {
+    font-size: 12px;
+}
+
+.info-t {
+    margin: 8px;
+    font-size: 18px;
+}
 

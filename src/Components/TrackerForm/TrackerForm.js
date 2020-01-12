@@ -133,7 +133,7 @@ class TrackerForm extends React.Component {
         <div className="logo-header">
           <img src={Logo} alt="job hound logo" />
         </div>
-        <div onSubmit={this.handleSubmit} className="tracker-form">
+        <form onSubmit={this.handleSubmit} className="tracker-form">
           <div>
             <input
               required
@@ -159,7 +159,7 @@ class TrackerForm extends React.Component {
               name="listing"
               onChange={this.handleInputChange}
               value={listing}
-              placeholder="Job Details"
+              placeholder="Listing"
             />
             <input
               required
@@ -232,14 +232,14 @@ class TrackerForm extends React.Component {
             </div>
             <div className="button" id="button-4">
               <div id="underline" />
-              <Link to="/">
+              
                 <button className="butt" type="submit">
                   Start Tracking
                 </button>
-              </Link>
+             
             </div>
           </div>
-        </div>
+        </form>
       </div>
     );
   }

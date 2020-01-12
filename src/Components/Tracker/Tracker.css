@@ -1,0 +1,59 @@
+.lil-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.top {
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.label {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.butt-dash {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.meta-dash {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    box-shadow: 0 3px 8px #373b666b;
+    border-radius: 5px;
+    width: 50%;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    box-shadow: 0 3px 8px #373b666b;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 10px;
+    padding: 20px;
+}
+

@@ -3,6 +3,7 @@ import "./Tracker.css";
 import { Link } from "react-router-dom";
 import config from "../../config";
 import TokenService from "../../services/token-service";
+import Logo from "../../../src/Images/Job Hound Logo 100px.png";
 
 class Tracker extends React.Component {
   constructor(props) {
@@ -47,40 +48,59 @@ class Tracker extends React.Component {
   render() {
     return (
       <div>
-        <h2>{this.state.listing.title}</h2>
-        <div className="meta">
-          <h3>{this.state.listing.company_name}</h3>
-          <h3>{this.state.listing.date_applied}</h3>
+        <div className="lil-header">
+          <img src={Logo} alt="job hound logo" className="lil-logo" />
         </div>
+        <h4 className="top">{this.state.listing.title}</h4>
 
-        <section className="contact">
-          <div>
-            <p>{this.state.listing.source}</p>
-            <p>{this.state.listing.location}</p>
-            <p>{this.state.listing.contact}</p>
+        <div className="page-container">
+          <div className="butt-dash">
+            <Link to="/dashboard" className="link">
+              <button className="button nav">Back</button>
+            </Link>
+
+            <Link to={"/update/" + this.state.listing.id} className="link">
+              <button className="button nav">Edit</button>
+            </Link>
+            <Link to="/dashboard" className="link">
+              <button
+                className="button nav"
+                onClick={this.deleteListingRequest}
+              >
+                Delete Tracker
+              </button>
+            </Link>
           </div>
 
-          <div>
+          <div className="meta-dash">
+            <p className="label">Company:</p>
+            <p>{this.state.listing.company_name}</p>
+            <p className="label">Location:</p>
+            <p>{this.state.listing.location}</p>
+            <p className="label">Application Date:</p>
+            <p>{this.state.listing.date_appllied}</p>
+            <p className="label">Interview Date:</p>
             <p>{this.state.listing.date_interviewed}</p>
+            <p className="label">Contact:</p>
             <p>{this.state.listing.phone}</p>
             <p>{this.state.listing.email}</p>
           </div>
-        </section>
 
-        <div className="stages">
-          <button>Lead</button>
-          <button>Applied</button>
-          <button>Interviewed</button>
-          <button>Denied</button>
+          <div className="extra">
+          <p className="label">Stage:</p>
+            <p>{this.state.listing.stage}</p>
+            <p className="label">Source:</p>
+            <p>{this.state.listing.listing}</p>
+            <p className="label">Point of Contact:</p>
+            <p>{this.state.listing.contact}</p>
+            <p className="label">Notes:</p>
+            <p>{this.state.listing.notes}</p>
+            
+          </div>
         </div>
 
-        <h4>Next steps/ Notes</h4>
-        <p>{this.state.listing.notes}</p>
+        {/* <hr className="break"></hr>
 
-        <hr></hr>
-
-        <h4>Job Details/ Listing</h4>
-        <p>{this.state.listing.listing}</p>
 
         <Link to="/dashboard">
           <button>Back</button>
@@ -90,7 +110,7 @@ class Tracker extends React.Component {
         </Link>
         <Link to="/dashboard">
           <button onClick={this.deleteListingRequest}>Delete Tracker</button>
-        </Link>
+        </Link> */}
       </div>
     );
   }

@@ -39,13 +39,14 @@ class JobList extends React.Component {
           <Link className="listing">
             <Link to={"/tracker/" + card.id} style={{ textDecoration: "none" }}>
               <div className="card">
-                <h3>{card.title}</h3>
+                <h3 className="info-t">{card.title}</h3>
+                <hr className="line"></hr>
                 <div className="meta">
-                  <div>
-                    <p>{card.company_name}</p>
+                  <div className="company">
+                    <p className="info-c">{card.company_name}</p>
                   </div>
                   <div>
-                    <p>{card.location}</p>
+                    <p className="info-l">{card.location}</p>
                   </div>
                 </div>
               </div>
