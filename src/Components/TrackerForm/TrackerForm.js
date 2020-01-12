@@ -129,81 +129,219 @@ class TrackerForm extends React.Component {
       listing
     } = this.state;
     return (
-      <div>
+      <div className="page">
         <div className="logo-header">
           <img src={Logo} alt="job hound logo" />
         </div>
+        <h4 className="form-tut">Give Job Hound some info to keep track of!</h4>
         <form onSubmit={this.handleSubmit} className="tracker-form">
           <div>
-            <input
+            <div className="group">
+              <input
+                type="text"
+                name="title"
+                onChange={this.handleInputChange}
+                value={title}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Job Title</label>
+            </div>
+            {/* <input
               required
               name="title"
               onChange={this.handleInputChange}
               value={title}
               placeholder="Job Title"
-            />
-            <input
+            /> */}
+            <div className="group">
+              <input
+                type="text"
+                name="company_name"
+                onChange={this.handleInputChange}
+                value={company_name}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Company Name</label>
+            </div>
+
+            {/* <input
               required
               name="company_name"
               onChange={this.handleInputChange}
               value={company_name}
               placeholder="Company Name"
-            />
-            <input
+            /> */}
+
+            <div className="group">
+              <input
+                type="text"
+                name="date_appllied"
+                onChange={this.handleInputChange}
+                value={date_appllied}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Application Date</label>
+            </div>
+
+            {/* <input
               name="date_appllied"
               onChange={this.handleInputChange}
               value={date_appllied}
               placeholder="Date Found/Date Applied"
-            />
+            /> */}
+
+            <div className="group">
+              <input
+                type="text"
+                name="listing"
+                onChange={this.handleInputChange}
+                value={listing}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Listing</label>
+            </div>
+            {/* 
             <input
               name="listing"
               onChange={this.handleInputChange}
               value={listing}
               placeholder="Listing"
-            />
-            <input
+            /> */}
+
+            <div className="group">
+              <input
+                type="text"
+                name="location"
+                onChange={this.handleInputChange}
+                value={location}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Location</label>
+            </div>
+
+            {/* <input
               required
               name="location"
               onChange={this.handleInputChange}
               value={location}
               placeholder="Location"
-            />
+            /> */}
           </div>
 
           <div>
-            <input
+            <div className="group">
+              <input
+                type="text"
+                name="source"
+                onChange={this.handleInputChange}
+                value={source}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Source</label>
+            </div>
+
+            {/* <input
               name="source"
               onChange={this.handleInputChange}
               value={source}
               placeholder="Source Found"
-            />
-            <input
+            /> */}
+
+            <div className="group">
+              <input
+                type="text"
+                name="contact"
+                onChange={this.handleInputChange}
+                value={contact}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Point of Contact</label>
+            </div>
+
+            {/* <input
               name="contact"
               onChange={this.handleInputChange}
               value={contact}
               placeholder="Hiring Manager/Contact"
-            />
+            /> */}
+
+            <div className="group">
+              <input
+                type="text"
+                name="email"
+                onChange={this.handleInputChange}
+                value={email}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Email</label>
+            </div>
+
+            {/* 
             <input
               name="email"
               onChange={this.handleInputChange}
               value={email}
               placeholder="Email"
-            />
-            <input
+            /> */}
+
+            <div className="group">
+              <input
+                type="text"
+                name="phone"
+                onChange={this.handleInputChange}
+                value={phone}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Phone</label>
+            </div>
+
+            {/* <input
               name="phone"
               onChange={this.handleInputChange}
               value={phone}
               placeholder="Phone"
-            />
+            /> */}
+
+            <div className="group">
+              <input
+                type="text"
+                name="date_interviewed"
+                onChange={this.handleInputChange}
+                value={date_interviewed}
+                required
+              />
+              <span className="highlight" />
+              <span className="bar" />
+              <label>Interview Date</label>
+            </div>
+            {/* 
             <input
               name="date_interviewed"
               onChange={this.handleInputChange}
               value={date_interviewed}
               placeholder="Interview Date"
-            />
+            /> */}
           </div>
 
-          <div>
+          <div className="final">
             <select
               required
               value={this.state.stage || ""}
@@ -215,11 +353,11 @@ class TrackerForm extends React.Component {
               <option value="Interviewed">Interviewed</option>
               <option value="Archived">Archive</option>
             </select>
-            <input
+            <textarea
               name="notes"
               onChange={this.handleInputChange}
               value={notes}
-              placeholder="Notes"
+              placeholder="Use me to remember any notes you had about the position, or journal about how your interview went! (Amazing, I'm sure.)"
             />
           </div>
 
@@ -232,11 +370,10 @@ class TrackerForm extends React.Component {
             </div>
             <div className="button" id="button-4">
               <div id="underline" />
-              
-                <button className="butt" type="submit">
-                  Start Tracking
-                </button>
-             
+
+              <button className="butt" type="submit">
+                Start Tracking
+              </button>
             </div>
           </div>
         </form>

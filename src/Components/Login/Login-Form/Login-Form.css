@@ -52,11 +52,7 @@ input {
 * {
     box-sizing: border-box;
   }
-  
-  /* basic stylings ------------------------------------------ */
-  body {
-    background: url(https://scotch.io/wp-content/uploads/2014/07/61.jpg);
-  }
+
   .container {
     font-family: 'Roboto';
     width: 600px;
@@ -65,19 +61,23 @@ input {
     background: #fff;
     padding: 10px 50px 50px;
   }
+  
   h2 {
     text-align: center;
     margin-bottom: 50px;
     color: #2b2e4a;
   }
+
   h2 small {
     font-weight: normal;
     color: #888;
     display: block;
   }
+
   .footer {
     text-align: center;
   }
+
   .footer a {
     color: #53b2c8;
   }
@@ -100,11 +100,13 @@ input {
     justify-content: center;
     margin-top: 15px;
   }
+
   /* form starting stylings ------------------------------- */
   .group {
     position: relative;
     margin-bottom: 45px;
   }
+
   input {
     font-size: 18px;
     padding: 10px 10px 10px 5px;
@@ -113,6 +115,7 @@ input {
     border: none;
     border-bottom: 1px solid #757575;
   }
+
   input:focus {
     outline: none;
   }
@@ -145,6 +148,7 @@ input {
     display: block;
     width: 300px;
   }
+
   .bar:before,
   .bar:after {
     content: '';
@@ -157,9 +161,11 @@ input {
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
   }
+
   .bar:before {
     left: 50%;
   }
+  
   .bar:after {
     right: 50%;
   }
