@@ -178,7 +178,6 @@ class TrackerForm extends React.Component {
 
             <div className="group">
               <input
-                required
                 type="text"
                 name="date_appllied"
                 onChange={this.handleInputChange}
@@ -202,7 +201,6 @@ class TrackerForm extends React.Component {
                 name="listing"
                 onChange={this.handleInputChange}
                 value={listing}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
@@ -264,7 +262,6 @@ class TrackerForm extends React.Component {
                 name="contact"
                 onChange={this.handleInputChange}
                 value={contact}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
@@ -284,7 +281,6 @@ class TrackerForm extends React.Component {
                 name="email"
                 onChange={this.handleInputChange}
                 value={email}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
@@ -305,7 +301,6 @@ class TrackerForm extends React.Component {
                 name="phone"
                 onChange={this.handleInputChange}
                 value={phone}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
@@ -325,7 +320,6 @@ class TrackerForm extends React.Component {
                 name="date_interviewed"
                 onChange={this.handleInputChange}
                 value={date_interviewed}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
