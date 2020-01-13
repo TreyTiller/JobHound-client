@@ -146,7 +146,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Job Title</label>
+              <label className="track">Job Title</label>
             </div>
             {/* <input
               required
@@ -165,7 +165,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Company Name</label>
+              <label className="track">Company Name</label>
             </div>
 
             {/* <input
@@ -185,7 +185,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Date Found/ Applied</label>
+              <label className="track">Date Found/ Applied</label>
             </div>
 
             {/* <input
@@ -204,7 +204,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Listing</label>
+              <label className="track">Listing</label>
             </div>
             {/* 
             <input
@@ -224,7 +224,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Location</label>
+              <label className="track">Location</label>
             </div>
 
             {/* <input
@@ -265,7 +265,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Point of Contact</label>
+              <label className="track">Point of Contact</label>
             </div>
 
             {/* <input
@@ -284,7 +284,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Email</label>
+              <label className="track">Email</label>
             </div>
 
             {/* 
@@ -304,7 +304,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Phone</label>
+              <label className="track">Phone</label>
             </div>
 
             {/* <input
@@ -323,7 +323,7 @@ class TrackerForm extends React.Component {
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Interview Date</label>
+              <label className="track">Interview Date</label>
             </div>
             {/* 
             <input
