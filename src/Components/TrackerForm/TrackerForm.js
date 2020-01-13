@@ -46,7 +46,7 @@ class TrackerForm extends React.Component {
       return alert("The stage is a required field");
     } else {
       const { title } = this.state;
-      alert(`Job Hound is now tracking a ${title} opprotunity!`);
+      alert(`Job Hound is now tracking a ${title} opportunity!`);
       var data = {
         title: this.state.title,
         company_name: this.state.company_name,
@@ -138,11 +138,11 @@ class TrackerForm extends React.Component {
           <div>
             <div className="group">
               <input
+                required
                 type="text"
                 name="title"
                 onChange={this.handleInputChange}
                 value={title}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
@@ -157,11 +157,11 @@ class TrackerForm extends React.Component {
             /> */}
             <div className="group">
               <input
+                required
                 type="text"
                 name="company_name"
                 onChange={this.handleInputChange}
                 value={company_name}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
@@ -178,15 +178,15 @@ class TrackerForm extends React.Component {
 
             <div className="group">
               <input
+                required
                 type="text"
                 name="date_appllied"
                 onChange={this.handleInputChange}
                 value={date_appllied}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
-              <label>Application Date</label>
+              <label>Date Found/ Applied</label>
             </div>
 
             {/* <input
@@ -218,11 +218,11 @@ class TrackerForm extends React.Component {
 
             <div className="group">
               <input
+                required
                 type="text"
                 name="location"
                 onChange={this.handleInputChange}
                 value={location}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
@@ -239,18 +239,17 @@ class TrackerForm extends React.Component {
           </div>
 
           <div>
-            <div className="group">
+            {/* <div className="group">
               <input
                 type="text"
                 name="source"
                 onChange={this.handleInputChange}
                 value={source}
-                required
               />
               <span className="highlight" />
               <span className="bar" />
               <label>Source</label>
-            </div>
+            </div> */}
 
             {/* <input
               name="source"
@@ -344,7 +343,7 @@ class TrackerForm extends React.Component {
           <div className="final">
             <select
               required
-              value={this.state.stage || ""}
+              value={this.state.stage || "Lead"}
               onChange={evt => this.updateState(evt)}
               name={this.state.stage}
             >

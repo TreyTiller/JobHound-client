@@ -4,28 +4,28 @@ import AuthApiService from "../../../services/auth-api-service";
 import { Button, Input } from "../../Utils/Utils";
 import { Link } from "react-router-dom";
 import "./Login-Form.css";
-//import FadeIn from "react-fade-in";
-//import Lottie from "react-lottie";
-//import * as doneData from "../../../../src/doneloading.json";
-//import * as cupData from "../../../../src/cupLoader.json";
+import FadeIn from "react-fade-in";
+import Lottie from "react-lottie";
+import * as cupData from "../../../Images/job-hound-loader.json";
+import * as doneData from "../../../Images/job-hound-loader.json"
 
-// const defaultOptions = {
-//   loop: true,
-//   autoplay: true,
-//   animationData: cupData.default,
-//   rendererSettings: {
-//     preserveAspectRatio: "xMidYMid slice"
-//   }
-// };
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: cupData.default,
+  // rendererSettings: {
+  //   preserveAspectRatio: "xMidYMid slice"
+  // }
+};
 
-// const defaultOptions2 = {
-//   loop: false,
-//   autoplay: true,
-//   animationData: doneData.default,
-//   rendererSettings: {
-//     preserveAspectRatio: "xMidYMid slice"
-//   }
-// };
+const defaultOptions2 = {
+  loop: false,
+  autoplay: true,
+  animationData: doneData.default,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
 
 export default class LoginForm extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ export default class LoginForm extends Component {
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault();
-    this.setState({ error: null });
+    this.setState({ error: null, loading: true  });
     const { user_name, password } = ev.target;
 
     AuthApiService.postLogin({
@@ -59,27 +59,27 @@ export default class LoginForm extends Component {
         this.props.onLoginSuccess();
       })
       .catch(res => {
-        this.setState({ error: res.error });
+        this.setState({ error: res.error, loading: false, done: false  });
       });
   };
   render() {
-    // const { error } = this.state;
-    // if (this.state.loading || this.state.done) {
-    //   return (
-    //     <div className="loading">
-    //       <FadeIn>
-    //         <div class="d-flex justify-content-center align-items-center">
-    //           <h1>Fetching Coffee</h1>
-    //           {!this.state.done ? (
-    //             <Lottie options={defaultOptions} height={120} width={120} />
-    //           ) : (
-    //             <Lottie options={defaultOptions2} height={120} width={120} />
-    //           )}
-    //         </div>
-    //       </FadeIn>
-    //     </div>
-    //   );
-    // }
+    const { error } = this.state;
+    if (this.state.loading || this.state.done) {
+      return (
+        <div className="loading">
+          <FadeIn>
+            <div class="d-flex justify-content-center align-items-center">
+              <h4 className="load-label">Sniffing Out Clues</h4>
+              {!this.state.done ? (
+                <Lottie options={defaultOptions} height={300} width={281} />
+              ) : (
+                <Lottie options={defaultOptions2} height={120} width={120} />
+              )}
+            </div>
+          </FadeIn>
+        </div>
+      );
+    }
     return (
       // <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
       //   <div role="alert">
@@ -120,6 +120,7 @@ export default class LoginForm extends Component {
       //   </div>
       // </form>
       <div className="container">
+        <h2>Log into Job Hound</h2>
         <form className="login_form" onSubmit={this.handleSubmitJwtAuth}>
           <div role="alert">
             {this.state.error && <p className="red">{this.state.error}</p>}

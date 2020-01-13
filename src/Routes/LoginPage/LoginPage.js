@@ -24,7 +24,7 @@ export default class LoginPage extends Component {
         <div className="logo-header">
           <img src={Logo} alt="job hound logo" className="login-logo" />
         </div>
-        <h2>Log into Job Hound</h2>
+        {/* <h2>Log into Job Hound</h2> */}
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
       </Section>
     );
