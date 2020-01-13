@@ -89,7 +89,9 @@
   }
   
   /* active state */
-  input:focus ~ label {
+  input:focus ~ label,
+input:valid ~ label,
+input:focus:invalid ~ label {
     top: -20px;
     font-size: 14px;
     color: #373b66;
