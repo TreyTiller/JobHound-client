@@ -54,3 +54,16 @@ textarea:focus {
     transition: all 0.3s ease-Out;
     color: #373b66
 }
+
+label.track {
+  color: #373b66;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: -20px;
+  transition: 0.5s ease all;
+  -moz-transition: 0.5s ease all;
+  -webkit-transition: 0.5s ease all;
+}
