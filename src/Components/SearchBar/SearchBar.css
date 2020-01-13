@@ -70,6 +70,7 @@ p {
 .button.nav {
 	width: 100px;
 	text-decoration: none;
+	background-color: transparent;
 }
 
 .nav:hover {
