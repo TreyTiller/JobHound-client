@@ -34,9 +34,9 @@ class JobList extends React.Component {
   // }
   render() {
     return (
-      <Link className="whole-list">
+      <div className="whole-list">
         {this.props.listData.map(card => (
-          <Link className="listing">
+          <div className="listing">
             <Link to={"/tracker/" + card.id} style={{ textDecoration: "none" }}>
               <div className="card">
                 <h3 className="info-t">{card.title}</h3>
@@ -51,9 +51,9 @@ class JobList extends React.Component {
                 </div>
               </div>
             </Link>
-          </Link>
+          </div>
         ))}
-      </Link>
+      </div>
     );
   }
 }

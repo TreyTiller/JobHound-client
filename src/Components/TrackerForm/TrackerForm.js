@@ -375,4 +375,12 @@ class TrackerForm extends React.Component {
   }
 }
 
+TrackerForm.defaultProps = {
+  match: {
+      params: {
+          
+      }
+  }
+}
+
 export default TrackerForm;

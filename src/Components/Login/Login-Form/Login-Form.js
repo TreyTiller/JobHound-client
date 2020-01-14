@@ -6,25 +6,13 @@ import { Link } from "react-router-dom";
 import "./Login-Form.css";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
-import * as cupData from "../../../Images/job-hound-loader.json";
+import * as dogData from "../../../Images/job-hound-loader.json";
 import * as doneData from "../../../Images/job-hound-loader.json"
 
 const defaultOptions = {
   loop: true,
   autoplay: true,
-  animationData: cupData.default,
-  // rendererSettings: {
-  //   preserveAspectRatio: "xMidYMid slice"
-  // }
-};
-
-const defaultOptions2 = {
-  loop: false,
-  autoplay: true,
-  animationData: doneData.default,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice"
-  }
+  animationData: dogData.default
 };
 
 export default class LoginForm extends Component {
@@ -69,11 +57,11 @@ export default class LoginForm extends Component {
         <div className="loading">
           <FadeIn>
             <div class="d-flex justify-content-center align-items-center">
-              <h4 className="load-label">Sniffing Out Clues</h4>
+              <h4 className="load-label">Tracking Down Opportunity</h4>
               {!this.state.done ? (
                 <Lottie options={defaultOptions} height={300} width={281} />
               ) : (
-                <Lottie options={defaultOptions2} height={120} width={120} />
+                <Lottie options={defaultOptions} height={120} width={120} />
               )}
             </div>
           </FadeIn>

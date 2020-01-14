@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Login from "./Login";
 import { MemoryRouter } from "react-router-dom";
+import LoginForm from "../Login-Form/Login-Form";
 
 describe(`LoginForm component`, () => {
   it("renders the complete form without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(
       <MemoryRouter>
-        <Login />
+        <LoginForm />
       </MemoryRouter>,
       div
     );
