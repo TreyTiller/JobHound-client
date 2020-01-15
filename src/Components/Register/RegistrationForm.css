@@ -1,4 +1,4 @@
-.logo-header{
+/* .logo-header{
     display: flex;
     justify-content: center;
 }
@@ -56,7 +56,7 @@
   }
 
   /* form starting stylings ------------------------------- */
-  .group {
+  /* .group {
     position: relative;
     margin-bottom: 45px;
   }
@@ -72,10 +72,10 @@
 
   input:focus {
     outline: none;
-  }
+  } */
   
   /* LABEL ======================================= */
-  label {
+  /* label {
     color: #999;
     font-size: 18px;
     font-weight: normal;
@@ -86,19 +86,19 @@
     transition: 0.5s ease all;
     -moz-transition: 0.5s ease all;
     -webkit-transition: 0.5s ease all;
-  }
+  } */
   
   /* active state */
-  input:focus ~ label,
+  /* input:focus ~ label,
 input:valid ~ label,
 input:focus:invalid ~ label {
     top: -20px;
     font-size: 14px;
     color: #373b66;
-  }
+  } */
   
   /* BOTTOM BARS ================================= */
-  .bar {
+  /* .bar {
     position: relative;
     display: block;
     width: 300px;
@@ -122,16 +122,16 @@ input:focus:invalid ~ label {
   
   .bar:after {
     right: 50%;
-  }
+  } */
   
   /* active state */
-  input:focus ~ .bar:before,
+  /* input:focus ~ .bar:before,
   input:focus ~ .bar:after {
     width: 50%;
   }
-  
+   */
   /* HIGHLIGHTER ================================== */
-  .highlight {
+  /* .highlight {
     position: absolute;
     height: 60%;
     width: 100px;
@@ -139,14 +139,14 @@ input:focus:invalid ~ label {
     left: 0;
     pointer-events: none;
     opacity: 0.5;
-  }
+  } */
   
   /* active state */
-  input:focus ~ .highlight {
+  /* input:focus ~ .highlight {
     -webkit-animation: inputHighlighter 0.2s ease;
     -moz-animation: inputHighlighter 0.2s ease;
     animation: inputHighlighter 0.2s ease;
-  }
+  } */
   
   /* ANIMATIONS ================ */
   /* @-webkit-keyframes inputHighlighter {
@@ -163,7 +163,7 @@ input:focus:invalid ~ label {
   } */
   
 
-  .but-container {
+  /* .but-container {
     display: flex;
     justify-content: center;
   }
@@ -188,9 +188,9 @@ input:focus:invalid ~ label {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-  }
+  } */
   
-  .button:hover {
+  /* .button:hover {
     border: 2px solid #373b66;
     transition: all 0.3s ease-Out;
   }
@@ -204,9 +204,9 @@ input:focus:invalid ~ label {
     background: transparent;
     border: none;
     cursor: pointer;
-  }
+  } */
   
-  .butt:hover {
+  /* .butt:hover {
     color: #373b66;
     transition: all 0.3s ease-Out;
   }
@@ -220,21 +220,21 @@ input:focus:invalid ~ label {
   #button-4 button {
     position: relative;
     transition: all 0.45s ease-Out;
-  }
+  } */
   
-  #underline {
+  /* #underline {
     width: 100%;
     height: 2.5px;
     margin-top: 15px;
     align-self: flex-end;
     left: -200px;
     background: #373b66; /*Change this to the color of the sidebar*/
-    position: absolute;
+    /* position: absolute;
     transition: all 0.3s ease-Out;
     bottom: 0;
-  }
+  } */ 
   
-  #button-4:hover #underline {
+  /* #button-4:hover #underline {
     left: 0;
   }
 
@@ -242,5 +242,5 @@ input:focus:invalid ~ label {
 
   @media only screen and (max-width: 700px) {
     
-  }
+  } */
   

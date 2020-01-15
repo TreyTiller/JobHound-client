@@ -89,6 +89,7 @@ class Registration extends React.Component {
       // </div>
 
       <div className="container">
+        <h2 className="login-title">Create an account to get started!</h2>
         <form className="login_form" onSubmit={this.handleSubmit}>
           <div role="alert">{error && <p className="red">{error}</p>}</div>
           <div className="group">

@@ -244,5 +244,38 @@ input:focus:invalid ~ label {
 
 
   @media only screen and (max-width: 700px) {
-  
+    .container {
+      font-family: 'Roboto';
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      background: #fff;
+    }
+
+    .login-title {
+      margin: auto;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    input {
+      font-size: 15px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 300px;
+      border: none;
+      border-bottom: .5px solid #757575;
+      border-radius: 0px;
+    }
+
+    .group {
+      position: relative;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
   }

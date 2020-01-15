@@ -64,7 +64,7 @@ class Tracker extends React.Component {
             </Link>
             <Link to="/dashboard" className="link">
               <button
-                className="button nav"
+                className="button nav hidden"
                 onClick={this.deleteListingRequest}
               >
                 Delete Tracker
@@ -87,7 +87,7 @@ class Tracker extends React.Component {
           </div>
 
           <div className="extra">
-          <p className="label">Stage:</p>
+            <p className="label">Stage:</p>
             <p>{this.state.listing.stage}</p>
             <p className="label">Source:</p>
             <p>{this.state.listing.listing}</p>
@@ -95,7 +95,23 @@ class Tracker extends React.Component {
             <p>{this.state.listing.contact}</p>
             <p className="label">Notes:</p>
             <p>{this.state.listing.notes}</p>
-            
+          </div>
+
+          <div className="butt-dash-mobile">
+            <Link to="/dashboard" className="link">
+              <button className="button nav bottom">Back</button>
+            </Link>
+            <Link to={"/update/" + this.state.listing.id} className="link">
+              <button className="button nav bottom">Edit</button>
+            </Link>
+            <Link to="/dashboard" className="link">
+              <button
+                className="button nav bottom"
+                onClick={this.deleteListingRequest}
+              >
+                Delete Tracker
+              </button>
+            </Link>
           </div>
         </div>
 

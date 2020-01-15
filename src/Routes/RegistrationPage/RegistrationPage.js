@@ -21,7 +21,7 @@ export default class RegistrationPage extends Component {
         <div className="logo-header">
           <img src={Logo} alt="job hound logo" className="login-logo" />
         </div>
-        <h2>Create an account to get started!</h2>
+        {/* <h2 className="login-title">Create an account to get started!</h2> */}
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />
