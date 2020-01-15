@@ -80,8 +80,6 @@ p {
 	display: none;
 }
 
-
-
 @media only screen and (max-width: 1100px) {
 	.top-bar {
 		display: flex;

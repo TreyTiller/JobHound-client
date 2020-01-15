@@ -1,54 +1,3 @@
-/* .login_label {
-    display: none;
-}
-
-.LoginForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    margin: auto;
-}
-
-.user_name {
-    margin:auto;
-}
-
-.password {
-    margin: auto;
-}
-
-input {
-    border: .5px solid rgba(225, 225, 225, 0.336);
-    height: 20px;
-    margin: 10px;
-    width: 100px;
-    background-color: #171717;
-    color: white;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100px;
-    margin: auto;
-}
-
-.red {
-    text-align: center;
-}
-
-.loading {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-} */
-
-
-
-
-
 * {
     box-sizing: border-box;
   }
@@ -292,3 +241,8 @@ input:focus:invalid ~ label {
     font-size: 25px;
   }
   
+
+
+  @media only screen and (max-width: 700px) {
+  
+  }
