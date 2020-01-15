@@ -61,9 +61,10 @@ class Dashboard extends React.Component {
       <div>
         <div className="main">
           <SearchBar
-            className="search"
+            className="search-bar"
             handleInputChange={this.handleInputChange}
             submitSearch={this.submitSearch}
+            setSection={this.setSection}
           />
           <JobList listData={listData} />
         </div>

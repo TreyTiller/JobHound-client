@@ -45,6 +45,7 @@ class JobList extends React.Component {
                   <div className="company">
                     <p className="info-c">{card.company_name}</p>
                   </div>
+                  <hr className="line-2"></hr>
                   <div>
                     <p className="info-l">{card.location}</p>
                   </div>

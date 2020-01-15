@@ -8,8 +8,8 @@
 .top {
     text-align: center;
     margin-bottom: 80px;
-    margin-top: 50px;
-    font-size: 24px;
+    margin-top: 70px;
+    font-size: 28px;
 }
 
 .page-container {
@@ -24,6 +24,7 @@
     font-size: 14px;
     margin-top: 5px;
     margin-bottom: 5px;
+    color: #373b66;
 }
 
 .butt-dash {
