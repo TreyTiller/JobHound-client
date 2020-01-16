@@ -11,7 +11,7 @@ class TrackerForm extends React.Component {
     this.state = {
       title: "",
       company_name: "",
-      stage: "",
+      stage: "Lead",
       source: "",
       location: "",
       contact: "",
