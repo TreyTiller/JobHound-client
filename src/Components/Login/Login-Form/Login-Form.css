@@ -13,7 +13,7 @@
   
   h2 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     color: #2b2e4a;
   }
 
@@ -240,6 +240,11 @@ input:focus:invalid ~ label {
     margin: 0px;
     font-size: 25px;
   }
+
+  .red {
+    margin-bottom: 25px;
+    text-align: center;
+  }
   
 
 
@@ -277,5 +282,10 @@ input:focus:invalid ~ label {
       width: 100%;
       margin: 0px;
       padding: 0px;
+    }
+
+    .red {
+      margin-bottom: 25px;
+      text-align: center;
     }
   }
