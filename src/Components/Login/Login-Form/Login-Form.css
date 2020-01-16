@@ -244,6 +244,15 @@ input:focus:invalid ~ label {
   .red {
     margin-bottom: 25px;
     text-align: center;
+      animation:blinkingText 1.5s infinite ease-in-out;
+      outline: none;
+}
+  
+  @keyframes blinkingText {
+      0%{ color: #fffbfb; }
+      50%{ color: #373b66ec;}
+      100%{ color: #fffbfb;}
+  
   }
   
 
@@ -284,8 +293,4 @@ input:focus:invalid ~ label {
       padding: 0px;
     }
 
-    .red {
-      margin-bottom: 25px;
-      text-align: center;
-    }
   }
