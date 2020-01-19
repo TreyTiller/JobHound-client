@@ -1,58 +1,58 @@
-.logo-header{
-    display: flex;
-    justify-content: center;
+.logo-header {
+  display: flex;
+  justify-content: center;
 }
 
 .tracker-form {
-    margin: auto;
-    width: 350px;
+  margin: auto;
+  width: 350px;
 }
 
 .page {
-    text-align: center;
+  text-align: center;
 }
 
 .form-tut {
-    margin: 50px;
-    font-size: 20px;
+  margin: 50px;
+  font-size: 20px;
 }
 
 select {
-    border: 2px solid #bfc0c0;
-    height: 40px;
-    width: 150px;
-    box-shadow: 0 3px 8px #33375f8e;
-    color: #a2a3a3;
-    transition: 0.3s ease all;
-    margin-bottom: 45px;
-    cursor: pointer;
+  border: 2px solid #bfc0c0;
+  height: 40px;
+  width: 150px;
+  box-shadow: 0 3px 8px #33375f8e;
+  color: #a2a3a3;
+  transition: 0.3s ease all;
+  margin-bottom: 45px;
+  cursor: pointer;
 }
 
 select:hover {
-    border: 2px solid #373b66;
-    transition: all 0.3s ease-Out;
-    color: #373b66
+  border: 2px solid #373b66;
+  transition: all 0.3s ease-Out;
+  color: #373b66;
 }
 
 .final {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 textarea {
-    width: 350px;
-    height: 150px;
-    font-size: 15px;
-    border: 2px solid #bfc0c0;
-    box-shadow: 0 3px 8px #33375f8e;
-    transition: 0.3s ease all;
+  width: 350px;
+  height: 150px;
+  font-size: 15px;
+  border: 2px solid #bfc0c0;
+  box-shadow: 0 3px 8px #33375f8e;
+  transition: 0.3s ease all;
 }
 
 textarea:focus {
-    border: 2px solid #373b66;
-    transition: all 0.3s ease-Out;
-    color: #373b66
+  border: 2px solid #373b66;
+  transition: all 0.3s ease-Out;
+  color: #373b66;
 }
 
 label.track {

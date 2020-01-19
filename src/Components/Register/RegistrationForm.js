@@ -1,6 +1,5 @@
 import React from "react";
 import "./RegistrationForm.css";
-import { Button, Input, Required } from "../Utils/Utils";
 import AuthApiService from "../../services/auth-api-service";
 import { Link } from "react-router-dom";
 
@@ -40,54 +39,6 @@ class Registration extends React.Component {
   render() {
     const { error } = this.state;
     return (
-      // <div>
-      //   <form className="RegistrationForm" onSubmit={this.handleSubmit}>
-      //     <div role="alert">{error && <p className="red">{error}</p>}</div>
-      //     <div className="nick_name">
-      //       <label htmlFor="RegistrationForm__nick_name">Nickname</label>
-      //       <Input
-      //         name="nick_name"
-      //         type="text"
-      //         required
-      //         id="RegistrationForm__nick_name"
-      //         placeholder="Nickname"
-      //       ></Input>
-      //     </div>
-      //     <div className="user_name">
-      //       <label htmlFor="RegistrationForm__user_name">
-      //         User name <Required />
-      //       </label>
-      //       <Input
-      //         name="user_name"
-      //         type="text"
-      //         required
-      //         id="RegistrationForm__user_name"
-      //         placeholder="User Name"
-      //       ></Input>
-      //     </div>
-      //     <div className="password">
-      //       <label htmlFor="RegistrationForm__password">
-      //         Password <Required />
-      //       </label>
-      //       <Input
-      //         name="password"
-      //         type="password"
-      //         required
-      //         id="RegistrationForm__password"
-      //         placeholder="Password"
-      //       ></Input>
-      //     </div>
-      //     <Button type="submit" className="register">
-      //       Register
-      //     </Button>
-      //   </form>
-      //   <div className="already-account">
-      //     <Link to="/login" className="login_link">
-      //       Already have an account?<button className="login">Log in</button>
-      //     </Link>
-      //   </div>
-      // </div>
-
       <div className="container">
         <h2 className="login-title">Create an account to get started!</h2>
         <form className="login_form" onSubmit={this.handleSubmit}>
@@ -145,7 +96,9 @@ class Registration extends React.Component {
 
               <div className="button" id="button-4">
                 <div id="underline" />
-                <button type="submit" className="butt">Register</button>
+                <button type="submit" className="butt">
+                  Register
+                </button>
               </div>
             </div>
           </div>

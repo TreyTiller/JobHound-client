@@ -148,13 +148,7 @@ class TrackerForm extends React.Component {
               <span className="bar" />
               <label className="track">Job Title</label>
             </div>
-            {/* <input
-              required
-              name="title"
-              onChange={this.handleInputChange}
-              value={title}
-              placeholder="Job Title"
-            /> */}
+
             <div className="group">
               <input
                 required
@@ -168,14 +162,6 @@ class TrackerForm extends React.Component {
               <label className="track">Company Name</label>
             </div>
 
-            {/* <input
-              required
-              name="company_name"
-              onChange={this.handleInputChange}
-              value={company_name}
-              placeholder="Company Name"
-            /> */}
-
             <div className="group">
               <input
                 type="text"
@@ -188,13 +174,6 @@ class TrackerForm extends React.Component {
               <label className="track">Date Found/ Applied</label>
             </div>
 
-            {/* <input
-              name="date_appllied"
-              onChange={this.handleInputChange}
-              value={date_appllied}
-              placeholder="Date Found/Date Applied"
-            /> */}
-
             <div className="group">
               <input
                 type="text"
@@ -206,13 +185,6 @@ class TrackerForm extends React.Component {
               <span className="bar" />
               <label className="track">Listing</label>
             </div>
-            {/* 
-            <input
-              name="listing"
-              onChange={this.handleInputChange}
-              value={listing}
-              placeholder="Listing"
-            /> */}
 
             <div className="group">
               <input
@@ -226,36 +198,9 @@ class TrackerForm extends React.Component {
               <span className="bar" />
               <label className="track">Location</label>
             </div>
-
-            {/* <input
-              required
-              name="location"
-              onChange={this.handleInputChange}
-              value={location}
-              placeholder="Location"
-            /> */}
           </div>
 
           <div>
-            {/* <div className="group">
-              <input
-                type="text"
-                name="source"
-                onChange={this.handleInputChange}
-                value={source}
-              />
-              <span className="highlight" />
-              <span className="bar" />
-              <label>Source</label>
-            </div> */}
-
-            {/* <input
-              name="source"
-              onChange={this.handleInputChange}
-              value={source}
-              placeholder="Source Found"
-            /> */}
-
             <div className="group">
               <input
                 type="text"
@@ -267,13 +212,6 @@ class TrackerForm extends React.Component {
               <span className="bar" />
               <label className="track">Point of Contact</label>
             </div>
-
-            {/* <input
-              name="contact"
-              onChange={this.handleInputChange}
-              value={contact}
-              placeholder="Hiring Manager/Contact"
-            /> */}
 
             <div className="group">
               <input
@@ -287,14 +225,6 @@ class TrackerForm extends React.Component {
               <label className="track">Email</label>
             </div>
 
-            {/* 
-            <input
-              name="email"
-              onChange={this.handleInputChange}
-              value={email}
-              placeholder="Email"
-            /> */}
-
             <div className="group">
               <input
                 type="text"
@@ -307,13 +237,6 @@ class TrackerForm extends React.Component {
               <label className="track">Phone</label>
             </div>
 
-            {/* <input
-              name="phone"
-              onChange={this.handleInputChange}
-              value={phone}
-              placeholder="Phone"
-            /> */}
-
             <div className="group">
               <input
                 type="text"
@@ -325,13 +248,6 @@ class TrackerForm extends React.Component {
               <span className="bar" />
               <label className="track">Interview Date</label>
             </div>
-            {/* 
-            <input
-              name="date_interviewed"
-              onChange={this.handleInputChange}
-              value={date_interviewed}
-              placeholder="Interview Date"
-            /> */}
           </div>
 
           <div className="final">
@@ -377,10 +293,8 @@ class TrackerForm extends React.Component {
 
 TrackerForm.defaultProps = {
   match: {
-      params: {
-          
-      }
+    params: {}
   }
-}
+};
 
 export default TrackerForm;

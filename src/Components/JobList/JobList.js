@@ -1,37 +1,8 @@
 import React from "react";
 import "./JobList.css";
-import Trash from "../../../src/Images/icons8-delete-bin-50.png";
 import { Link } from "react-router-dom";
-import TokenService from "../../services/token-service";
-import config from "../../config";
-
-// This will render a set of filterable cards that are used to navigate to a specific job tracker
-
-// The functionality of this is making a fetch call on componentDidMount() to GET information from
-// Job listings table and place in a object. We then map through that object on render and display
-// the most important data. We create a endpoint param based on job_id
 
 class JobList extends React.Component {
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //         "listData": []
-  //     }
-  // }
-
-  // componentDidMount() {
-  //   fetch(`${config.API_ENDPOINT}/api/listings`, {
-  //       headers: {
-  //           authorization: `Bearer ${TokenService.getAuthToken()}`
-  //       }
-  //   })
-  //       .then(res => res.json())
-  //       .then(listings => {
-  //           this.setState({
-  //               listData: listings
-  //           })
-  //       })
-  // }
   render() {
     return (
       <div className="whole-list">

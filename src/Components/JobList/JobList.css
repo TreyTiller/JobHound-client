@@ -1,136 +1,132 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #9fa0a0;
+  border-radius: 5px;
+  width: 200px;
+  min-height: 180px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgba(15, 15, 15, 0.897);
+  padding: 12px;
+  transition: 0.4s ease all;
+}
+
+.card:hover {
+  box-shadow: 0 6px 8px #373b66b4;
+  transition: 0.4s ease all;
+}
+
+.listing {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whole-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 50px;
+  text-decoration: none;
+}
+
+.delete {
+  width: 60px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.trash {
+  width: 25px;
+  height: 25px;
+}
+
+.delete-button {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  border: 0.5px solid #bfc0c0;
+}
+
+.line-2 {
+  display: none;
+}
+
+.company {
+  margin-bottom: 5px;
+}
+
+.info-c {
+  font-size: 14px;
+}
+
+.info-l {
+  font-size: 12px;
+}
+
+.info-t {
+  margin: 8px;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 2px solid #9fa0a0;
     border-radius: 5px;
-    width: 200px;
-    min-height: 180px;
+    box-shadow: 0 2px 4px #373b66a1;
+    width: 150px;
+    height: 125px;
     text-align: center;
     margin-bottom: 10px;
-    color: rgba(15, 15, 15, 0.897);
+    color: rgba(15, 15, 15, 0.788);
     padding: 12px;
     transition: 0.4s ease all;
-}
+  }
 
-.card:hover {
-    box-shadow: 0 6px 8px #373b66b4;
-	transition: 0.4s ease all;
-}
-
-.listing{
+  .listing {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 0px;
     justify-content: center;
     text-decoration: none;
-}
+  }
 
-.whole-list {
+  .whole-list {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 50px;
-    text-decoration: none;
-}
-
-.delete{
-    width: 60px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.trash {
-    width: 25px;
-    height: 25px;
-}
-
-.delete-button{
-    display: flex;
-    justify-content: center;
-}
-
-.line {
-    border: 0.5px solid #bfc0c0;
-}
-
-.line-2 {
-    display: none;
-}
-
-.company {
+    margin-top: 115px;
     margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .line {
+    display: block;
+    border: 0.5px solid #bfc0c0;
+  }
+
+  .line-2 {
+    display: block;
+    border: 0.5px solid #cdcece88;
+    width: 15%;
+  }
+
+  .info-t {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
 }
-
-.info-c {
-    font-size: 14px;
-}
-
-.info-l {
-    font-size: 12px;
-}
-
-.info-t {
-    margin: 8px;
-    font-size: 18px;
-}
-
-
-@media only screen and (max-width: 1100px) {
-
-    .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border: 2px solid #9fa0a0;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px #373b66a1;
-        width: 150px;
-        height: 125px;
-        text-align: center;
-        margin-bottom: 10px;
-        color: rgba(15, 15, 15, 0.788);
-        padding: 12px;
-        transition: 0.4s ease all;
-    }
-
-    .listing{
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        justify-content: center;
-        text-decoration: none;
-    }
-
-    .whole-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin-top: 115px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        margin-right: 0px;
-        text-decoration: none;
-        padding:10px;
-    }
-    .line {
-        display: block;
-        border: 0.5px solid #bfc0c0;
-    }
-
-    .line-2 {
-        display: block;
-        border: 0.5px solid #cdcece88;
-        width: 15%;
-    }
-
-    .info-t{
-        width: 100%;
-        margin:0px;
-        padding: 0px;
-    }
-    
-}
-

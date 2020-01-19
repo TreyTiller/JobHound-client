@@ -43,8 +43,6 @@ class SearchBar extends React.Component {
             </Link>
           </div>
 
-          {/* This Creates the top navigation in mobile view */}
-
           <div className="top-bar">
             <button
               className="filter-mobile"

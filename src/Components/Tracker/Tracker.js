@@ -114,19 +114,6 @@ class Tracker extends React.Component {
             </Link>
           </div>
         </div>
-
-        {/* <hr className="break"></hr>
-
-
-        <Link to="/dashboard">
-          <button>Back</button>
-        </Link>
-        <Link to={"/update/" + this.state.listing.id}>
-          <button>Edit</button>
-        </Link>
-        <Link to="/dashboard">
-          <button onClick={this.deleteListingRequest}>Delete Tracker</button>
-        </Link> */}
       </div>
     );
   }

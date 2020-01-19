@@ -73,6 +73,9 @@ class Tutorial extends React.Component {
     }
     return (
       <div>
+        <div role="alert">
+          {error && <p className="red">{this.state.error}</p>}
+        </div>
         <div className="logo-header">
           <img src={Logo} alt="job hound logo" className="login-logo"></img>
         </div>
