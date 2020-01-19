@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Job Hound - https://job-hound.now.sh/
 
-## Available Scripts
+## Fullstack Capstone Application(Thinkful)
+Organization is one of the biggest parts of having a successful job search. With so many readily accessable online job applications, organization can be difficult to keep up with. After a full day of applying to companys they all begin to mesh together into a mushy fuzzy blob. Job Hound aims to help avoid that brain fuzz! This simple job tracker allows you to seperate opportunity by what stage of the application process you're in. Give it a try and find out how easy a job search can be!
 
-In the project directory, you can run:
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  Created and bootstrapped with create-react-app this application uses HTML/CSS/JavaScript/JSX to present a simple and streamlined frontend and uses Node/Express/PostgreSQL for a full backend/database tested by a mixture of mocha/chai/enzyme, which you can check out here-- https://github.com/TreyTiller/JobHound-api
+  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## High Level User Stories
+        - Have access to an introduction/ tutorial 
+        - Be able to easily register for site entrance
+        - Should be able to easily pick job tracker from a list
+        - Should be able to create new job trackers
+        - Be able to Edit existing job trackers
+        - Be able to easily navigate the list of job trackers
+        
 
-### `npm test`
+## Landing Page
+        The landing page is meant to be an introduction/tutorial to the functionality of the app! All the information needed           is laid out right there and easy to follow! The user can choose to sign up or login right from this page.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Authentication System
+        The authentication system works using JWT and a bearer token system. Everything is stored within session storage and           cleared on exit or logout, and all passwords are hashed in the front and back end.
 
-### `npm run build`
+## Dashboard
+        The dashboard displays all current job trackers in one searchable/filterable list.
+        
+![Jan-19-2020 15-44-24](https://user-images.githubusercontent.com/52612098/72688210-ed7a9b80-3ad2-11ea-9ca4-9d9a0f13a6e7.gif)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Job Trackers
+       the trackers are simple, easy to use, and packed with editable info!
+       
+![Jan-19-2020 15-45-36](https://user-images.githubusercontent.com/52612098/72688221-100cb480-3ad3-11ea-9cbf-5fa42462b289.gif)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Add Tracker Form
+        This form collects all user information and starts tracking their next big opportunity!
+        
+![Jan-19-2020 15-46-28](https://user-images.githubusercontent.com/52612098/72688237-303c7380-3ad3-11ea-816c-45b52b1f177a.gif)
+        
