@@ -1,0 +1,64 @@
+.welcome {
+  text-align: center;
+}
+
+.howdy {
+  color: black;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.body {
+  text-align: center;
+  margin: 25px;
+}
+
+.meta-dash {
+  margin: auto;
+}
+
+.screen {
+  width: 600px;
+  height: auto;
+  margin: auto;
+}
+
+.screen-mobile {
+  display: none;
+}
+
+.script {
+  margin: 15px;
+}
+
+.loading {
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 700px) {
+  .welcome {
+    margin: 8px;
+  }
+
+  .howdy {
+    font-size: larger;
+  }
+
+  .seperator {
+    display: block;
+  }
+
+  .screen {
+    display: none;
+  }
+
+  .screen-mobile {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: auto;
+  }
+}
