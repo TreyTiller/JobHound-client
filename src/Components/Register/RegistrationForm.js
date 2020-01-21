@@ -69,7 +69,7 @@ class Registration extends React.Component {
 
           <div className="group">
             <input
-              type="text"
+              type="password"
               name="password"
               id="RegistrationForm__password"
               required
