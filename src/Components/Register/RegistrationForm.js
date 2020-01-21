@@ -83,14 +83,14 @@ class Registration extends React.Component {
               <div className="button" id="button-4">
                 <div id="underline" />
                 <Link to="/login">
-                  <button className="butt">Login</button>
+                  <button type ="button" className="butt">Login</button>
                 </Link>
               </div>
 
               <div className="button" id="button-4">
                 <div id="underline" />
                 <Link to="/">
-                  <button className="butt">Tutorial</button>
+                  <button type ="button" className="butt">Tutorial</button>
                 </Link>
               </div>
 
