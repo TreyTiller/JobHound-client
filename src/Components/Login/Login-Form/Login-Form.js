@@ -69,7 +69,7 @@ export default class LoginForm extends Component {
     return (
       <div className="container">
         <h2 class="login-title">Log into Job Hound</h2>
-        <form className="login_form" onSubmit={(e)=>this.handleSubmitJwtAuth(e)}>
+        <form className="login_form" onSubmit={(ev)=>this.handleSubmitJwtAuth(ev)}>
           <div role="alert">
             {error && <p className="red">{this.state.error}</p>}
           </div>
