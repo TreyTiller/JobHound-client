@@ -41,13 +41,8 @@ class Registration extends React.Component {
       .catch(res => {
         this.setState({ error: res.error });
       });
-    
-     if(this.state.error !== null) {
-      return alert({error})
-    } else {
     const {nickName} = this.state;
      alert(`Howdy there ${nickName}! Let's sign in and get started!`);
-    }
   };
 
   render() {
