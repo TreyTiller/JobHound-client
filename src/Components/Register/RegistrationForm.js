@@ -18,6 +18,7 @@ class Registration extends React.Component {
   handleSubmit = ev => {
     ev.preventDefault();
     const { nick_name, user_name, password } = ev.target;
+     alert(`Howdy there ${nick_name}! Let's sign in and get started!`);
 
     this.setState({ error: null });
     AuthApiService.postUser({
