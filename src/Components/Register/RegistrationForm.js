@@ -36,13 +36,14 @@ class Registration extends React.Component {
         nick_name.value = "";
         user_name.value = "";
         password.value = "";
-        this.props.onRegistrationSuccess();
+        this.props.onRegistrationSuccess();    
+      const {nickName} = this.state;
+     alert(`Howdy there ${nickName}! Let's sign in and get started!`);
       })
       .catch(res => {
         this.setState({ error: res.error });
       });
-    const {nickName} = this.state;
-     alert(`Howdy there ${nickName}! Let's sign in and get started!`);
+
   };
 
   render() {
