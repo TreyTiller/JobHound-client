@@ -101,14 +101,14 @@ export default class LoginForm extends Component {
               <div className="button" id="button-4">
                 <div id="underline" />
                 <Link to="/register">
-                  <button className="butt">Register</button>
+                  <button type="button" className="butt">Register</button>
                 </Link>
               </div>
 
               <div className="button" id="button-4">
                 <div id="underline" />
                 <Link to="/">
-                  <button className="butt">Tutorial</button>
+                  <button type="button" className="butt">Tutorial</button>
                 </Link>
               </div>
 
