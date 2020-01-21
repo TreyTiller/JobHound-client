@@ -25,9 +25,7 @@ class Registration extends React.Component {
   handleSubmit = ev => {
     ev.preventDefault();
     const { nick_name, user_name, password } = ev.target;
-    const {nickName} = this.state;
-     alert(`Howdy there ${nickName}! Let's sign in and get started!`);
-
+    
     this.setState({ error: null });
     AuthApiService.postUser({
       user_name: user_name.value,
@@ -43,6 +41,13 @@ class Registration extends React.Component {
       .catch(res => {
         this.setState({ error: res.error });
       });
+    
+     if(this.state.error !== null) {
+      return alert({error})
+    } else {
+    const {nickName} = this.state;
+     alert(`Howdy there ${nickName}! Let's sign in and get started!`);
+    }
   };
 
   render() {
