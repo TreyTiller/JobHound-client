@@ -274,7 +274,7 @@ class TrackerForm extends React.Component {
             <div className="button" id="button-4">
               <div id="underline" />
               <Link to="/dashboard">
-                <button className="butt">Back</button>
+                <button type="button" className="butt">Back</button>
               </Link>
             </div>
             <div className="button" id="button-4">
