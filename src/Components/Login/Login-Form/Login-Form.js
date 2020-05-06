@@ -67,9 +67,9 @@ export default class LoginForm extends Component {
       );
     }
     return (
-      <div className="container">
-        <h2 class="login-title">Log into Job Hound</h2>
-        <form className="login_form" onSubmit={this.handleSubmitJwtAuth}>
+//       <div className="container">
+//         <h2 class="login-title">Log into Job Hound</h2>
+        <form className="login_form" onSubmit={(ev)=>this.handleSubmitJwtAuth(ev)}>
           <div role="alert">
             {error && <p className="red">{this.state.error}</p>}
           </div>
@@ -101,14 +101,14 @@ export default class LoginForm extends Component {
               <div className="button" id="button-4">
                 <div id="underline" />
                 <Link to="/register">
-                  <button className="butt">Register</button>
+                  <button type="button" className="butt">Register</button>
                 </Link>
               </div>
 
               <div className="button" id="button-4">
                 <div id="underline" />
                 <Link to="/">
-                  <button className="butt">Tutorial</button>
+                  <button type="button" className="butt">Tutorial</button>
                 </Link>
               </div>
 
@@ -121,7 +121,7 @@ export default class LoginForm extends Component {
             </div>
           </div>
         </form>
-      </div>
+//       </div>
     );
   }
 }

@@ -11,14 +11,21 @@ class Registration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: null
+      error: null,
+      nickName: ""
     };
   }
+
+ handleInputChange = e => {
+    this.setState({
+      nickName: e.target.value
+    });
+  };
 
   handleSubmit = ev => {
     ev.preventDefault();
     const { nick_name, user_name, password } = ev.target;
-
+    
     this.setState({ error: null });
     AuthApiService.postUser({
       user_name: user_name.value,
@@ -29,11 +36,14 @@ class Registration extends React.Component {
         nick_name.value = "";
         user_name.value = "";
         password.value = "";
-        this.props.onRegistrationSuccess();
+        this.props.onRegistrationSuccess();    
+      const {nickName} = this.state;
+     alert(`Howdy there ${nickName}! Let's sign in and get started!`);
       })
       .catch(res => {
         this.setState({ error: res.error });
       });
+
   };
 
   render() {
@@ -48,6 +58,7 @@ class Registration extends React.Component {
               type="text"
               name="nick_name"
               id="RegistrationForm__nick_name"
+      onChange={this.handleInputChange}
               required
             />
             <span className="highlight" />
@@ -69,7 +80,7 @@ class Registration extends React.Component {
 
           <div className="group">
             <input
-              type="text"
+              type="password"
               name="password"
               id="RegistrationForm__password"
               required
@@ -83,14 +94,14 @@ class Registration extends React.Component {
               <div className="button" id="button-4">
                 <div id="underline" />
                 <Link to="/login">
-                  <button className="butt">Login</button>
+                  <button type ="button" className="butt">Login</button>
                 </Link>
               </div>
 
               <div className="button" id="button-4">
                 <div id="underline" />
                 <Link to="/">
-                  <button className="butt">Tutorial</button>
+                  <button type ="button" className="butt">Tutorial</button>
                 </Link>
               </div>
 
