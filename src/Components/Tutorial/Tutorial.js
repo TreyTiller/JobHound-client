@@ -153,7 +153,7 @@ class Tutorial extends React.Component {
           <p className="script">
             This is how you will set up new opprotunities for Job Hound to keep
             track of. The form is fairly straight forward. The only important
-            thing to say here is to make sure to chose the right stage that your
+            thing to say here is to make sure to choose the right stage that your
             opportunity is in! This leads us to the individual trackers.
           </p>
         </div>
